@@ -47,8 +47,8 @@ section {
 
 
 .image img {
-  width: auto;
-  max-height: 500px;
+  width: 80%;
+  max-height: auto;
   border-radius: 10px;
   max-wdith: 500px;
   display: block;
