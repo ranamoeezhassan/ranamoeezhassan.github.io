@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Profile</title>
+  <title>Rana Moeez Hassan - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -12,56 +12,194 @@
 </head>
 
 <body>
-  <header>
-    <h1>Rana Moeez Hassan</h1>
-  </header>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">Rana Moeez Hassan</a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#interests" class="nav-link">Interests</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Rana, an engineering and computer science student passionate about
-      building innovative solutions and exploring new technologies.
-    </p>
-  </section>
-
-  <section class="hobbies">
-    <h2>My Hobbies</h2>
-    <div>
-      <p>Playing cricket and soccer</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <!-- Animated Background Elements -->
+    <div class="hero-background">
+      <div class="floating-image pakistan">
+        <img src="images/pakistan_map.png" alt="Pakistan Map" />
+      </div>
+      <div class="floating-image uae">
+        <img src="images/uae_map.svg" alt="UAE Map" />
+      </div>
+      <div class="floating-image colby">
+        <img src="images/colby_logo.png" alt="Colby Logo" />
+      </div>
+      <div class="floating-image dartmouth">
+        <img src="images/dartmouth_logo.svg" alt="Dartmouth Logo" />
+      </div>
     </div>
 
-    <div>
-      <p>Exploring AI and coding projects</p>
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="images/personal_photo.png" alt="Rana Moeez Hassan - Profile Photo" />
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-name">Rana Moeez Hassan</h1>
+        <div class="hero-education">
+          <p class="education-line">Electrical Engineering at Dartmouth '27</p>
+          <p class="education-line">Computer Science and Physics at Colby '26</p>
+        </div>
+        <p class="hero-description">
+          Passionate about building innovative solutions and exploring new technologies.
+          Combining creativity with technical expertise to solve real-world problems.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+      </div>
     </div>
-
-    <div>
-      <p>Working out at the gym</p>
-    </div>
-
-    <!-- <ul>
-      <li>Playing cricket and soccer</li>
-      <li>Exploring AI and coding projects</li>
-      <li>Working out at the gym</li>
-    </ul> -->
   </section>
 
-  <section class="link">
-    <h2>Favorite Website</h2>
-    <p>Small, unknown website used for hosting videos by random strangers on the internet: <a href="https://www.youtube.com"
-        target="_blank">Youtube</a></p>
-  </section>
+  <div class="container">
 
-  <section class="image">
-    <h2>Image</h2>
-    <img
-      src="images/personal_photo.jpg"
-      alt="Profile placeholder image" />
-  </section>
+    <section id="projects" class="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Personal Portfolio</h3>
+          <p>A responsive portfolio website built with vanilla HTML, CSS, and JavaScript to showcase my projects and
+            skills.</p>
+          <div class="project-links">
+            <a href="https://github.com/ranamoeezhassan/ranamoeezhassan.github.io" target="_blank">View Code</a>
+            <a href="https://ranamoeezhassan.github.io" target="_blank">Live Demo</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>AI Exploration Project</h3>
+          <p>Currently working on various AI and machine learning projects to explore the potential of artificial
+            intelligence in solving complex problems.</p>
+          <div class="project-links">
+            <a href="#" target="_blank">Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills & Technologies</h2>
+      <div class="skills-grid">
+
+        <div class="skill-item">
+          <h3>Programming</h3>
+          <p>Java, C, C++, Python, JavaScript, MATLAB</p>
+        </div>
+
+        <div class="skill-item">
+          <h3>Web Development</h3>
+          <p>HTML, CSS, React, Bootstrap, Node.js</p>
+        </div>
+
+        <div class="skill-item">
+          <h3>AI & Machine Learning</h3>
+          <p>Data Science, Neural Networks, Scikit-learn, TensorFlow, Pandas, NumPy</p>
+        </div>
+
+        <div class="skill-item">
+          <h3>Software & Tools</h3>
+          <p>Git, VS Code, GitHub, GitLab, Jupyter, Linux, SEO</p>
+        </div>
+
+        <div class="skill-item">
+          <h3>Engineering & Design</h3>
+          <p>SolidWorks, Fusion 360, 3D Modeling, Rapid Prototyping</p>
+        </div>
+
+        <div class="skill-item">
+          <h3>Hardware & Embedded Systems</h3>
+          <p>STM32 Nucleo, Arduino, Raspberry Pi, VHDL, Circuit Design</p>
+        </div>
+
+        <div class="skill-item">
+          <h3>Analysis & Simulation</h3>
+          <p>Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD), SPICE, Control Theory, MATLAB Simulink
+          </p>
+        </div>
+
+        <div class="skill-item">
+          <h3>Data & Research</h3>
+          <p>Data Visualization, Statistical Analysis, Excel, MATLAB, Research Writing, Experimental Design</p>
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <section id="interests" class="hobbies">
+      <h2>Interests</h2>
+      <div class="hobbies-grid">
+        <div class="hobby-card">
+          <p>🛠️ DIY Engineering Projects</p>
+        </div>
+        <div class="hobby-card">
+          <p>🤖 Exploring Software Engineering & AI Projects</p>
+        </div>
+        <div class="hobby-card">
+          <p>📚 Learning New Technologies</p>
+        </div>
+        <div class="hobby-card">
+          <p>🏏 Playing Cricket & Soccer</p>
+        </div>
+        <div class="hobby-card">
+          <p>💪 Working Out at the Gym</p>
+        </div>
+        <div class="hobby-card">
+          <p>🍿🎥Watching anime, movies and tv shows</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get In Touch</h2>
+      <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:rana.moeez.hassan.ug@dartmouth.edu" aria-label="Email"><i data-feather="mail"></i></a>
+        <a href="https://github.com/ranamoeezhassan" target="_blank" aria-label="GitHub">
+          <i data-feather="github"></i></a>
+        <a href="https://www.linkedin.com/in/rana-moeez-hassan/" target="_blank" aria-label="LinkedIn"><i
+            data-feather="linkedin"></i></a>
+      </div>
+    </section>
+
+  </div>
 
   <footer>
-    <p>Made by Rana</p>
+    <p>&copy; 2025 Rana Moeez Hassan. Built with passion and vanilla CSS.</p>
   </footer>
 
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
