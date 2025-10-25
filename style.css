@@ -597,27 +597,142 @@ p {
   margin: 0;
 }
 
+/* Experience section */
+.experience {
+  background: var(--glass-bg);
+}
+
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  border-radius: 16px;
+  padding: 32px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid var(--text-green);
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent-gradient);
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1), 0 0 20px rgba(46, 204, 113, 0.1);
+  border-color: var(--glass-border);
+  border-left-color: var(--text-green);
+}
+
+.experience-header {
+  margin-bottom: 20px;
+}
+
+.experience-header h3 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.experience-meta span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.company {
+  color: var(--text-green);
+  font-weight: 600;
+}
+
+.location {
+  color: var(--text-secondary);
+}
+
+.duration {
+  color: var(--text-muted);
+  background: rgba(46, 204, 113, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.experience-content ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.experience-content li {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 8px;
+}
+
+.experience-content li::before {
+  content: '→';
+  color: var(--text-green);
+  font-weight: bold;
+  position: absolute;
+  left: -16px;
+  top: 0;
+}
+
+.experience-content li:last-child {
+  margin-bottom: 0;
+}
+
 /* Projects section */
 .projects {
   background: var(--glass-bg);
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   margin-top: 24px;
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(200, 200, 200, 0.3);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 32px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 4px solid var(--accent-color);
 }
 
 .project-card::before {
@@ -626,22 +741,147 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: var(--accent-gradient);
+  height: 1px;
+  background: var(--primary-gradient);
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1), 0 0 25px rgba(46, 204, 113, 0.1);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1), 0 0 20px rgba(54, 162, 235, 0.1);
   border-color: var(--glass-border);
+  border-left-color: var(--accent-color);
 }
 
-.project-card h3 {
+.project-header {
+  margin-bottom: 20px;
+}
+
+.project-header h3 {
   color: var(--text-primary);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
   margin-bottom: 16px;
+}
+
+.project-meta span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-type {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.tech-stack {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.project-status {
+  color: var(--text-muted);
+  background: rgba(54, 162, 235, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.project-content p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Project category color variations */
+.project-card:nth-child(1) {
+  border-left-color: #e74c3c; /* Machine Learning - Red */
+}
+.project-card:nth-child(1) .project-type {
+  color: #e74c3c;
+}
+.project-card:nth-child(1) .project-status {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.project-card:nth-child(2) {
+  border-left-color: #f39c12; /* Web Game - Orange */
+}
+.project-card:nth-child(2) .project-type {
+  color: #f39c12;
+}
+.project-card:nth-child(2) .project-status {
+  background: rgba(243, 156, 18, 0.1);
+}
+
+.project-card:nth-child(3) {
+  border-left-color: #9b59b6; /* Systems Programming - Purple */
+}
+.project-card:nth-child(3) .project-type {
+  color: #9b59b6;
+}
+.project-card:nth-child(3) .project-status {
+  background: rgba(155, 89, 182, 0.1);
+}
+
+.project-card:nth-child(4) {
+  border-left-color: #3498db; /* Network Programming - Blue */
+}
+.project-card:nth-child(4) .project-type {
+  color: #3498db;
+}
+.project-card:nth-child(4) .project-status {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.project-card:nth-child(5) {
+  border-left-color: #1abc9c; /* Data Analysis - Teal */
+}
+.project-card:nth-child(5) .project-type {
+  color: #1abc9c;
+}
+.project-card:nth-child(5) .project-status {
+  background: rgba(26, 188, 156, 0.1);
+}
+
+.project-card:nth-child(6) {
+  border-left-color: #e67e22; /* Engineering Design - Dark Orange */
+}
+.project-card:nth-child(6) .project-type {
+  color: #e67e22;
+}
+.project-card:nth-child(6) .project-status {
+  background: rgba(230, 126, 34, 0.1);
+}
+
+.project-card:nth-child(7) {
+  border-left-color: #2ecc71; /* Mechanical Engineering - Green */
+}
+.project-card:nth-child(7) .project-type {
+  color: #2ecc71;
+}
+.project-card:nth-child(7) .project-status {
+  background: rgba(46, 204, 113, 0.1);
+}
+
+.project-card:nth-child(8) {
+  border-left-color: #8e44ad; /* Structural Engineering - Dark Purple */
+}
+.project-card:nth-child(8) .project-type {
+  color: #8e44ad;
+}
+.project-card:nth-child(8) .project-status {
+  background: rgba(142, 68, 173, 0.1);
 }
 
 .project-links {
@@ -977,9 +1217,33 @@ footer p {
   }
   
   .hobbies-grid,
-  .project-grid,
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Project cards remain single column but with mobile padding */
+  .project-card {
+    padding: 24px;
+    margin: 0;
+  }
+
+  /* Experience cards mobile adjustments */
+  .experience-card {
+    padding: 24px;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .experience-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-content li {
+    font-size: 0.95rem;
   }
   
   .contact-links {
@@ -1020,9 +1284,30 @@ footer p {
     font-size: 1.6rem;
   }
   
-  .project-grid,
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  /* Smaller project card padding on very small screens */
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  /* Experience cards for very small screens */
+  .experience-card {
+    padding: 20px;
+  }
+
+  .experience-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-content li {
+    font-size: 0.9rem;
   }
 }
